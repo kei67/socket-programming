@@ -28,7 +28,7 @@ fn main() {
         },
         "udp" => match role {
             "server" => {
-                todo!()
+                udp_server::serve(address).unwrap_or_else(|e| error!("{}", e));
             }
             "client" => {
                 todo!()
